@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  profiles:
+    active: dev
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mybatis/**/*Dao.xml,service/**/*Dao.xml
+  type-aliases-package: com.ivan.manage.**.dto
+
